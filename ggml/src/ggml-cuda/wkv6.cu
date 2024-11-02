@@ -1,5 +1,9 @@
 #include "common.cuh"
+<<<<<<<< HEAD:ggml/src/ggml-cuda/rwkv_wkv6.cu
 #include "rwkv_wkv6.cuh"
+========
+#include "wkv6.cuh"
+>>>>>>>> master:ggml/src/ggml-cuda/wkv6.cu
 
 static __global__ void rwkv_wkv_f32(const int B, const int T, const int C, const int H, const float * k, const float * v, const float * r, const float * tf, const float * td, const float * s, float * dst) {
     const int tid = threadIdx.x;
